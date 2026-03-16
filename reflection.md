@@ -7,6 +7,10 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 - What did the game look like the first time you ran it?
 - List at least two concrete bugs you noticed at the start  
   (for example: "the secret number kept changing" or "the hints were backwards").
+- The hint text was not complementary with the chosen secret number. Ex: When I would put a number less than the secret number, it would give me the hint to go lower instead of higher
+- The game over message after maxing out attempts did not refresh when I clicked the new game button.
+- When I got the right answer for the game and pressed new game, the page did not refresh and would not let me play again
+
 
 ---
 
