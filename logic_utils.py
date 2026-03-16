@@ -1,3 +1,6 @@
+import random
+
+
 def get_range_for_difficulty(difficulty: str):
     """Return (low, high) inclusive range for a given difficulty."""
     if difficulty == "Easy":
@@ -28,6 +31,8 @@ def parse_guess(raw: str):
     return True, value, None
 
 
+#FIX: Refactored guess comparison logic into logic_utils.py using Copilot Agent mode
+#      (moved from app.py so it can be unit tested)
 def check_guess(guess, secret):
     """Compare guess to secret and return a normalized outcome string.
 
@@ -54,25 +59,8 @@ def check_guess(guess, secret):
     return "Too Low"
 
 
-import random
-
-
-def reset_game_state(session_state, low: int, high: int):
-    """Reset session state for a new game.
-
-    This emulates the Streamlit session state used by `app.py`.
-    """
-
-    session_state.status = "playing"
-    session_state.attempts = 0
-    session_state.secret = random.randint(low, high)
-    session_state.history = []
-    session_state.score = 0
-
-
-import random
-
-
+#FIX: Refactored scoring logic into logic_utils.py using Copilot Agent mode
+#      (moved from app.py for easier unit testing)
 def update_score(current_score: int, outcome: str, attempt_number: int):
     """Update score based on outcome and attempt number."""
     if outcome == "Win":
@@ -92,6 +80,8 @@ def update_score(current_score: int, outcome: str, attempt_number: int):
     return current_score
 
 
+#FIX: Refactored game reset logic into logic_utils.py using Copilot Agent mode
+#      (moved from app.py for easier unit testing)
 def reset_game_state(state, low: int, high: int):
     """Reset a Streamlit-like session state object for a new game.
 

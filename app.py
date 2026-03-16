@@ -1,6 +1,8 @@
 import random
 import streamlit as st
 
+#FIX: Refactored core game logic into logic_utils.py using Copilot Agent mode
+#      (keeps app.py focused on Streamlit UI code)
 from logic_utils import (
     get_range_for_difficulty,
     parse_guess,
