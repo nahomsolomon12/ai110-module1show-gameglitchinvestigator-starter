@@ -29,21 +29,27 @@ None thus far.
 - How did you decide whether a bug was really fixed? Run the application and check the functionality
 - Describe at least one test you ran (manual or using pytest)  
   and what it showed you about your code.
+  * I used a pytest to check how the guess is comparable to secret number.
 - Did AI help you design or understand any tests? How?
+It helped me design the necessary tests to check whether the logic_utils and app files are working in coalition in accordance with the logic of the game.
 
 ---
 
 ## 4. What did you learn about Streamlit and state?
 
 - In your own words, explain why the secret number kept changing in the original app.
+the random module was responsible in assigning new numbersas the numbers changed.
 - How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit?
+Streamlit uses the st.session_state to maintain session storage while streamlit re-executes your script on each interaction ("rerun")
 - What change did you make that finally gave the game a stable secret number?
+
 
 ---
 
 ## 5. Looking ahead: your developer habits
 
-- What is one habit or strategy from this project that you want to reuse in future labs or projects?
+- What is one habit or strategy from this project that you want to reuse in future labs or projects? 
   - This could be a testing habit, a prompting strategy, or a way you used Git.
-- What is one thing you would do differently next time you work with AI on a coding task?
-- In one or two sentences, describe how this project changed the way you think about AI generated code.
+  Attention to detail... Copilot and Claude tend to explain every step of the process they are going through to arrive at the result, it is important to understand the logical steps to make sure the way to get to the answer is iron clad.
+- What is one thing you would do differently next time you work with AI on a coding task? ask it more questions of why it using an approach. AI can be an amazing pair programmer if it is asked specific questions.
+- In one or two sentences, describe how this project changed the way you think about AI generated code. AI generated code helps reduce the man hour of engineers spent in rudimentary tasks while also helping poush the engineer to think more strategically. It is a great addition to the arsenal of toolkits of an engineer.
